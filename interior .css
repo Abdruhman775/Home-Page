@@ -1,0 +1,332 @@
+body {
+    width: 100%;
+    height: 1000px;
+    background-color: black;
+}
+header {
+    width: 103px;
+    height: 31px;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    font-size: 10px;
+    margin-top: 19px;
+    margin-left: 12px;
+    padding-left: 8px 9px 7px 8px;
+}
+h3 {
+    position: relative;
+    left: -2px;
+    top: 6px;
+    font-family: 'Crimson Pro';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 11px;
+    line-height: 16px;
+    
+/* identical to box height */
+
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+}
+h3:hover {
+    color: black;
+}
+header:hover {
+    background-color: gray;    
+    box-shadow: 1px 1px 5px 0px var(--gray);
+    position: sticky;
+    
+    padding-top: -80px;
+
+}
+:root{
+    --white: #f9f9f9;
+    --black: #36383F;
+    --gray: #85888C;
+} /* variables*/
+
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* Nav menu */
+.nav{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: var(--black);
+    overflow: hidden;
+
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: var(--white);
+}
+.menu a:hover{
+    background-color: var(--gray);
+}
+.nav{
+    max-height: 0;
+    transition: max-height .5s ease-out;
+}
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: var(--white);
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.hamb-line::before{
+    top: 5px;
+}
+.hamb-line::after{
+    top: -5px;
+}
+
+.side-menu {
+    display: none;
+}
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 50%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
+}
+p {
+    width: 250px;
+    height: 46px;
+    position: relative;
+    top: 150px;
+    left: 10px;
+    font-family: Lora;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #FFFFFF;
+}
+h1 {
+    color: #FFFFFF;
+    position: absolute;
+    top: 90px;
+    left: 10px;
+} 
+h2 {
+    color: #FFFFFF;
+}
+
+.h2 {
+    color: #FFFFFF;
+    text-decoration: underline;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: absolute;
+    top: 230px;
+    left: 10px;
+
+}
+.h2:hover {
+    font-weight: 700;
+}
+.img-1 {
+    width: 330px;
+    height: 250px;
+    text-align: center;
+    position: absolute;
+    top: 280px;
+    left: 12px;
+    right: 12px;
+    margin: auto 0;
+}
+.img-box {
+    width: 290px;
+    height: 138px;
+    position: absolute;
+    top: 470px;
+    left: 30px;
+    background-color: black;
+    padding: 10px;
+    box-shadow: 1px 1px #242427;
+}
+.img-2 {
+    height: 40.68px;
+    width: 42.2px;
+    position: relative;
+    left: 10.24px;
+    top: 7.32px;
+    border-radius: 50%;
+}
+.img-box p {
+    font-family: Montserrat;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    position: relative;    
+    top: -30px;
+    left: 65px;
+}
+.img-box h5 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+    position: relative;
+    top: -58px;
+    left: 65px;
+
+/* Gray 3 */
+
+    color: black;
+
+}
+.img-img-text {
+    position: relative;
+    width: 180px;
+    height: 45px;
+    left: 30px;
+    top: -45px;
+    
+    font-family: 'Lora';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    
+    color: #FFFFFF;
+}
+@media only screen and (min-width: 768px) {
+    .menu {
+        height: 20px;
+        width: 100%;
+    }
+    .gallery {
+        width: 200px;
+        display: block;
+        position: absolute;
+        top: 101px;
+        left: 300px;
+        color: #f9f9f9;
+        border: 2px solid white;
+        text-align: center;
+    }
+    .menu {
+        background-color: rgb(255, 255, 255);
+      }
+      
+      .menu li {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+        border: #f9f9f9;
+      }
+      
+      .menu li:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      
+      .menu li.active {
+        background-color: #04AA6D;
+        color: white;
+      }
+    .side-menu {
+        display: none;
+    }
+    .side-menu:checked {
+        display: none;
+    }
+    .side-menu:checked {
+        display: none;
+    }
+    .hamb{
+        display: none;
+        cursor: pointer;
+        float: right;
+        padding: 40px 20px;
+    
+    .hamb-line {
+        background: var(--white);
+        display: none;
+        height: 2px;
+        position: relative;
+        width: 24px;
+    
+    
+    .hamb-line::before,
+    .hamb-line::after{
+        background: var(--white);
+        content: '';
+        display: none;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .hamb-line::before{
+        top: 5px;
+        display: none;
+    }
+    .hamb-line::after{
+        top: -5px;
+        display: none;
+    }
+    
+    .side-menu {
+        display: none;
+    }
+    
+}
